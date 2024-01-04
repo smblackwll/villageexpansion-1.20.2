@@ -10,6 +10,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import ninjadude75.villageexapansion.util.ModCustomTrades;
 import ninjadude75.villageexapansion.villager.ModVillagers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,19 +33,23 @@ public class VillageExpansion implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 		//Loading all basic blocks here
-		Registry.register(Registries.BLOCK, new Identifier("villageexpansion","hunter_block.json"), HUNTER_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier("villageexpansion","hunter_block"), HUNTER_BLOCK);
 
 
 
 		//Loading all items here
-		Registry.register(Registries.ITEM, new Identifier("villageexpansion", "hunter_block.json"), new BlockItem(HUNTER_BLOCK, new FabricItemSettings()));
+		Registry.register(Registries.ITEM, new Identifier("villageexpansion", "hunter_block"), new BlockItem(HUNTER_BLOCK, new FabricItemSettings()));
 
 
 
 		//Loading all villages/villager stuff here
 
+		ModCustomTrades.registerCustomTrades();
+
 
 		ModVillagers.registerVillagers();
+
+
 
 	}
 }

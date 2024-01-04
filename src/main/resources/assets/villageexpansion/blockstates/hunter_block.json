@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "villageexpansion:block/hunter_block" }
+    "": {
+      "model": "villageexpansion:block/hunter_block"
+    }
   }
 }

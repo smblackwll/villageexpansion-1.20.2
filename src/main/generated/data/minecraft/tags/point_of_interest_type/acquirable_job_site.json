@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "villageexpansion:hunterpoi",
+      "required": false
+    }
+  ]
+}
