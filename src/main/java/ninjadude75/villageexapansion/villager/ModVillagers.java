@@ -17,10 +17,19 @@ import ninjadude75.villageexapansion.VillageExpansion;
 
 public class ModVillagers {
 
+    //POI KEYS
     public static final RegistryKey<PointOfInterestType> HUNTER_POI_KEY = poiKey("hunterpoi");
+
+    public static final RegistryKey<PointOfInterestType> GUARD_POI_KEY = poiKey("guardpoi");
+
+    //Actually set the POI
     public static final PointOfInterestType HUNTER_POI = registerPoi("hunterpoi", VillageExpansion.HUNTER_BLOCK);
 
+    public static final PointOfInterestType GUARD_POI = registerPoi("guardpoi", VillageExpansion.GUARD_POST);
+
+    //Profession
     public static final VillagerProfession HUNTER = registerProfession("hunter", HUNTER_POI_KEY);
+    public static final VillagerProfession GUARD = registerProfession("guard", GUARD_POI_KEY);
 
     private static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type){
         return Registry.register(Registries.VILLAGER_PROFESSION, new Identifier(VillageExpansion.MOD_ID, name),

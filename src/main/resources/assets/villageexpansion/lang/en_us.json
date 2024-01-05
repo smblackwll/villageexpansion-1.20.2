@@ -1,6 +1,7 @@
 {
   "entity.minecraft.villager.hunter": "Hunter",
 
-  "block.villageexpansion.hunter_block": "Hunter Workstation"
+  "block.villageexpansion.hunter_block": "Hunter Workstation",
+  "block.villageexpansion.guard_post": "Guard Post"
 
 }

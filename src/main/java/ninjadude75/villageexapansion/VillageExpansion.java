@@ -24,6 +24,7 @@ public class VillageExpansion implements ModInitializer {
 
 	//adding blocks with no functionality here (just decoration)
 	public static final Block HUNTER_BLOCK = new Block(FabricBlockSettings.create().strength(4.0f));
+	public static final Block GUARD_POST = new Block(FabricBlockSettings.create().strength(5.0f));
 
 	@Override
 	public void onInitialize() {
@@ -34,11 +35,13 @@ public class VillageExpansion implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		//Loading all basic blocks here
 		Registry.register(Registries.BLOCK, new Identifier("villageexpansion","hunter_block"), HUNTER_BLOCK);
+		Registry.register(Registries.BLOCK, new Identifier("villageexpansion","guard_post"), GUARD_POST);
 
 
 
 		//Loading all items here
 		Registry.register(Registries.ITEM, new Identifier("villageexpansion", "hunter_block"), new BlockItem(HUNTER_BLOCK, new FabricItemSettings()));
+		Registry.register(Registries.ITEM, new Identifier("villageexpansion","guard_post"), new BlockItem(GUARD_POST, new FabricItemSettings()));
 
 
 

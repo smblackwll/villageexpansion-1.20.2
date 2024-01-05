@@ -4,6 +4,10 @@
     {
       "id": "villageexpansion:hunterpoi",
       "required": false
+    },
+    {
+      "id": "villageexpansion:guardpoi",
+      "required": false
     }
   ]
 }
