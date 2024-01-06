@@ -22,6 +22,7 @@ public class ModPoiTagProvider extends TagProvider<PointOfInterestType> {
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         this.getOrCreateTagBuilder(PointOfInterestTypeTags.ACQUIRABLE_JOB_SITE)
                 .addOptional(new Identifier(VillageExpansion.MOD_ID, "hunterpoi"))
-                .addOptional(new Identifier(VillageExpansion.MOD_ID, "guardpoi"));
+                .addOptional(new Identifier(VillageExpansion.MOD_ID, "guardpoi"))
+                .addOptional(new Identifier(VillageExpansion.MOD_ID, "merchantpoi"));
     }
 }

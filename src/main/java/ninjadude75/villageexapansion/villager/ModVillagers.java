@@ -22,14 +22,20 @@ public class ModVillagers {
 
     public static final RegistryKey<PointOfInterestType> GUARD_POI_KEY = poiKey("guardpoi");
 
+    public static final RegistryKey<PointOfInterestType> MERCHANT_POI_KEY = poiKey("merchantpoi");
+
     //Actually set the POI
     public static final PointOfInterestType HUNTER_POI = registerPoi("hunterpoi", VillageExpansion.HUNTER_BLOCK);
 
     public static final PointOfInterestType GUARD_POI = registerPoi("guardpoi", VillageExpansion.GUARD_POST);
 
+    public static final PointOfInterestType MERCHANT_POI = registerPoi("merchantpoi", VillageExpansion.MERCHANT_BLOCK);
+
     //Profession
     public static final VillagerProfession HUNTER = registerProfession("hunter", HUNTER_POI_KEY);
     public static final VillagerProfession GUARD = registerProfession("guard", GUARD_POI_KEY);
+
+    public static final VillagerProfession MERCHANT = registerProfession("merchant", MERCHANT_POI_KEY);
 
     private static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type){
         return Registry.register(Registries.VILLAGER_PROFESSION, new Identifier(VillageExpansion.MOD_ID, name),

@@ -26,6 +26,8 @@ public class VillageExpansion implements ModInitializer {
 	public static final Block HUNTER_BLOCK = new Block(FabricBlockSettings.create().strength(4.0f));
 	public static final Block GUARD_POST = new Block(FabricBlockSettings.create().strength(5.0f));
 
+	public static final Block MERCHANT_BLOCK = new Block(FabricBlockSettings.create().strength(4.0f));
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -36,12 +38,16 @@ public class VillageExpansion implements ModInitializer {
 		//Loading all basic blocks here
 		Registry.register(Registries.BLOCK, new Identifier("villageexpansion","hunter_block"), HUNTER_BLOCK);
 		Registry.register(Registries.BLOCK, new Identifier("villageexpansion","guard_post"), GUARD_POST);
+		Registry.register(Registries.BLOCK, new Identifier("villageexpansion","merchant_block"), MERCHANT_BLOCK);
+
 
 
 
 		//Loading all items here
 		Registry.register(Registries.ITEM, new Identifier("villageexpansion", "hunter_block"), new BlockItem(HUNTER_BLOCK, new FabricItemSettings()));
 		Registry.register(Registries.ITEM, new Identifier("villageexpansion","guard_post"), new BlockItem(GUARD_POST, new FabricItemSettings()));
+		Registry.register(Registries.ITEM, new Identifier("villageexpansion","merchant_block"), new BlockItem(MERCHANT_BLOCK, new FabricItemSettings()));
+
 
 
 

@@ -1,7 +1,10 @@
 {
   "entity.minecraft.villager.hunter": "Hunter",
+  "entity.minecraft.vllager.guard": "Guard",
+  "entity.minecraft.villager.merchant": "Merchant",
 
   "block.villageexpansion.hunter_block": "Hunter Workstation",
-  "block.villageexpansion.guard_post": "Guard Post"
+  "block.villageexpansion.guard_post": "Guard Post",
+  "block.villageexpansion.merchant_block": "Merchant Stand"
 
 }

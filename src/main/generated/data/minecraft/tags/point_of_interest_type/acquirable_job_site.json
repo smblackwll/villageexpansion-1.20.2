@@ -8,6 +8,10 @@
     {
       "id": "villageexpansion:guardpoi",
       "required": false
+    },
+    {
+      "id": "villageexpansion:merchantpoi",
+      "required": false
     }
   ]
 }
