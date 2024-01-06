@@ -4,11 +4,15 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.block.v1.FabricBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import ninjadude75.villageexapansion.util.ModCustomTrades;
 import ninjadude75.villageexapansion.villager.ModVillagers;
@@ -27,6 +31,16 @@ public class VillageExpansion implements ModInitializer {
 	public static final Block GUARD_POST = new Block(FabricBlockSettings.create().strength(5.0f));
 
 	public static final Block MERCHANT_BLOCK = new Block(FabricBlockSettings.create().strength(4.0f));
+
+	private static final ItemGroup WORKSTATION_GROUP = FabricItemGroup.builder()
+			.icon(() -> new ItemStack(VillageExpansion.MERCHANT_BLOCK))
+			.displayName(Text.translatable("itemGroup.villageexpansion.workstation_group"))
+			.entries((context, entries) -> {
+				entries.add(VillageExpansion.MERCHANT_BLOCK);
+				entries.add(VillageExpansion.GUARD_POST);
+				entries.add(VillageExpansion.HUNTER_BLOCK);
+			})
+			.build();
 
 	@Override
 	public void onInitialize() {
@@ -47,6 +61,15 @@ public class VillageExpansion implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("villageexpansion", "hunter_block"), new BlockItem(HUNTER_BLOCK, new FabricItemSettings()));
 		Registry.register(Registries.ITEM, new Identifier("villageexpansion","guard_post"), new BlockItem(GUARD_POST, new FabricItemSettings()));
 		Registry.register(Registries.ITEM, new Identifier("villageexpansion","merchant_block"), new BlockItem(MERCHANT_BLOCK, new FabricItemSettings()));
+
+
+		//Registering item groups (creative mode tabs)
+
+		Registry.register(Registries.ITEM_GROUP, new Identifier(VillageExpansion.MOD_ID, "workstation_group"), WORKSTATION_GROUP);
+
+
+
+
 
 
 
